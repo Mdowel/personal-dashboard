@@ -16,7 +16,6 @@ try {
         throw Error("Something went wrong")
     }
     const data = await res.json()
-    console.log(data)
 
     document.getElementById("crypto-top").innerHTML = `
     <img src=${data.image.small} />
@@ -60,7 +59,6 @@ navigator.geolocation.getCurrentPosition(async position => {
 try {
 	const response = await fetch('https://v2.jokeapi.dev/joke/Any?safe-mode')
 	const data = await response.json();
-    console.log(data)
     document.getElementById('joke-question').textContent = data.setup
     document.getElementById('joke-answer').textContent = data.delivery
 } catch (error) {
